@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="300.0">cotrollers.IDbController</node>
+    <node x="186.0" y="75.0">repository.EmitorRepository</node>
+    <node x="166.0" y="300.0">view.DeliveryView</node>
+    <node x="151.0" y="450.0">view.LoginView</node>
+    <node x="328.0" y="300.0">view.InvoiceView</node>
+    <node x="0.0" y="75.0">cotrollers.InvoiceController</node>
+    <node x="308.0" y="375.0">model.PdfCreator</node>
+    <node x="179.0" y="225.0">model.InvoiceSystem</node>
+    <node x="0.0" y="375.0">model.InputParser</node>
+    <node x="0.0" y="0.0">repository.ProductsRepository</node>
+    <node x="182.0" y="150.0">cotrollers.ILoginController</node>
+    <node x="198.0" y="0.0">cotrollers.DeliveryController</node>
+    <node x="155.0" y="375.0">serialize.SerializeBill</node>
+    <node x="301.0" y="450.0">view.DbView</node>
+    <node x="0.0" y="150.0">repository.ClientRepository</node>
+    <node x="0.0" y="450.0">repository.Repository</node>
+    <node x="0.0" y="225.0">repository.SellerRepository</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="264.0" y="358.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

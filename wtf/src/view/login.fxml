@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1318.0" type="BorderPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Facturier">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="sellerComboBox" prefHeight="25.0" prefWidth="210.0" />
+            <TextField fx:id="userTextField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="210.0" text="2018" VBox.vgrow="NEVER" />
+            <Label fx:id="logLabel" prefHeight="17.0" prefWidth="212.0" textFill="#e80404" />
+            <Button mnemonicParsing="false" onAction="#logInControl" prefHeight="25.0" prefWidth="75.0" text="Login" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar fx:id="menuBar" disable="true" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Facturier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showDatabaseInfo" text="Baza de date" />
+                  <MenuItem mnemonicParsing="false" onAction="#generateInvoice" text="Genereaza factura" />
+                  <MenuItem mnemonicParsing="false" onAction="#reset" text="Factura noua" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>

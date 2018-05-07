@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="1358.0" type="BorderPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab closable="false" text="Produse">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="productsTable" editable="true" prefHeight="672.0" prefWidth="1358.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="product_id" />
+                            <TableColumn prefWidth="99.0" text="product_name" />
+                              <TableColumn prefWidth="75.0" text="product_price" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Separator prefHeight="16.0" prefWidth="1358.0" />
+                        <VBox alignment="CENTER" prefHeight="114.0" prefWidth="1358.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label text="Numele produsului: " />
+                                    <TextField fx:id="productNameText" />
+                                    <Label text="Pret : " />
+                                    <TextField fx:id="productPriceText" />
+                                    <Button mnemonicParsing="false" onAction="#addNewProduct" text="Adauga produsul" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="productLogLabel" prefHeight="17.0" prefWidth="276.0" textFill="#ff0404" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="Clienti">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="clientsTable" editable="true" prefHeight="694.0" prefWidth="1358.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn prefWidth="76.0" text="id" />
+                            <TableColumn prefWidth="230.0" text="nume" />
+                              <TableColumn prefWidth="175.0" text="cui" />
+                              <TableColumn prefWidth="135.0" text="numar" />
+                              <TableColumn prefWidth="184.0" text="sediu" />
+                              <TableColumn prefWidth="135.0" text="judet" />
+                              <TableColumn prefWidth="204.0" text="cont" />
+                              <TableColumn prefWidth="218.0" text="banca" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <HBox prefHeight="45.0" prefWidth="1358.0" spacing="10.0">
+                           <children>
+                              <Label text="Nume: " />
+                              <TextField fx:id="clientNameText" prefHeight="25.0" prefWidth="241.0" />
+                              <Label text="CUI:     " />
+                              <TextField fx:id="clientCuiText" />
+                              <Label text="NR. :" />
+                              <TextField fx:id="clientNrText" />
+                              <Label text="Sediu: " />
+                              <TextField fx:id="clientSediuText" prefHeight="25.0" prefWidth="266.0" />
+                              <Label text="Judet: " />
+                              <TextField fx:id="clientJudetText" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="1358.0" spacing="10.0">
+                           <children>
+                              <Label text="Cont:   " />
+                              <TextField fx:id="clientContText" prefHeight="25.0" prefWidth="243.0" />
+                              <Label text="Banca: " />
+                              <TextField fx:id="clientBankText" prefHeight="25.0" prefWidth="242.0" />
+                              <Button mnemonicParsing="false" onAction="#addNewClient" text="Adauga client" />
+                              <Label fx:id="clientLogLabel" prefHeight="17.0" prefWidth="313.0" textFill="RED">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="Rapoarte">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox prefHeight="66.0" prefWidth="1358.0" spacing="15.0">
+                           <children>
+                              <Label text="Tip de raport: ">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="raportsComboBox" prefHeight="25.0" prefWidth="266.0" />
+                              <Button mnemonicParsing="false" onAction="#generateReport" text="Genereaza raport" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefHeight="40.0" prefWidth="1358.0" />
+                        <TextArea fx:id="raportContentText" prefHeight="693.0" prefWidth="1358.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</fx:root>

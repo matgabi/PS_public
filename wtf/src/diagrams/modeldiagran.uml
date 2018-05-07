@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="22.999999999999943" y="235.0">model.Client</node>
+    <node x="0.0" y="80.0">model.ProductItem</node>
+    <node x="137.0" y="310.0">model.Factura</node>
+    <node x="136.0" y="80.0">model.DiscountItem</node>
+    <node x="0.0" y="385.0">model.TVA</node>
+    <node x="0.0" y="310.0">model.Product</node>
+    <node x="271.0" y="310.0">model.Emitor</node>
+    <node x="0.0" y="155.0">model.interfaces.ClientInterface</node>
+    <node x="75.75" y="0.0">model.interfaces.TableItem</node>
+    <node x="195.0" y="235.0">model.Seller</node>
+    <node x="172.0" y="155.0">model.interfaces.SellerInterface</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.ProductItem" target="model.interfaces.TableItem">
+      <point x="0.0" y="-15.0" />
+      <point x="58.0" y="55.0" />
+      <point x="101.5" y="55.0" />
+      <point x="-25.75" y="15.0" />
+    </edge>
+    <edge source="model.Seller" target="model.interfaces.SellerInterface">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="model.DiscountItem" target="model.interfaces.TableItem">
+      <point x="0.0" y="-15.0" />
+      <point x="196.5" y="55.0" />
+      <point x="153.0" y="55.0" />
+      <point x="25.75" y="15.0" />
+    </edge>
+    <edge source="model.Client" target="model.interfaces.ClientInterface">
+      <point x="5.6843418860808015E-14" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="21.0" y="0.0" />
+  <SelectedNodes>
+    <node>model.ProductItem</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

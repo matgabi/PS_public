@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="600.0" type="BorderPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="449.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Selecteaza emitor: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Separator prefHeight="16.0" prefWidth="600.0" />
+            <ComboBox fx:id="emitorsComboBox" onAction="#autoCompleteEmitorInfo" prefHeight="25.0" prefWidth="583.0" />
+            <Separator prefHeight="17.0" prefWidth="590.0" />
+            <HBox prefHeight="33.0" prefWidth="600.0">
+               <children>
+                  <Label text="Nume:" />
+                  <TextField fx:id="emitorNameText" editable="false" prefHeight="25.0" prefWidth="548.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="52.0" prefHeight="33.0" prefWidth="600.0">
+               <children>
+                  <Label text="Serie:  " />
+                  <TextField fx:id="emitorSerieText" editable="false" prefHeight="25.0" prefWidth="546.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="85.0" prefHeight="33.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="37.0" text="Nr. :   " />
+                  <TextField fx:id="emitorNrText" editable="false" prefHeight="25.0" prefWidth="544.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="118.0" prefHeight="33.0" prefWidth="600.0">
+               <children>
+                  <Label text="Emitor:" />
+                  <TextField fx:id="emitorEmText" editable="false" prefHeight="25.0" prefWidth="544.0" />
+               </children>
+            </HBox>
+            <Separator prefHeight="28.0" prefWidth="600.0" />
+            <Label text="Selecteaza masina:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="carsComboBox" onAction="#autoCompleteCarInfo" prefHeight="25.0" prefWidth="582.0" />
+            <Separator prefHeight="30.0" prefWidth="600.0" />
+            <HBox prefHeight="43.0" prefWidth="590.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="121.0" text="Facturi ramase:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="availableInvoicesText" disable="true" editable="false" prefHeight="25.0" prefWidth="399.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#buyMoreInvoices" prefHeight="25.0" prefWidth="65.0" text="Cumpara">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="590.0">
+               <children>
+                  <Label text="Salveaza in: ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="saveLocationText" prefHeight="25.0" prefWidth="419.0" text="C:\Users\MGA4CLJ\Desktop\Fac\ps\30238-matgabi\assignment2\facturiPdf" />
+                  <Button mnemonicParsing="false" onAction="#changeDirectory" prefHeight="25.0" prefWidth="64.0" text="Modifica" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#generateInvoice" text="Genereaza factura" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</fx:root>
